@@ -1,0 +1,19 @@
+{
+  "landing.cta.login": "Войти",
+  "landing.cta.bookDemo": "Заказать демо",
+  "landing.footer.copyright": "© {{year}} Monetiseur",
+  "landing.footer.privacy": "Политика конфиденциальности",
+  "landing.footer.terms": "Условия использования",
+  "landing.footer.contact": "Контакты",
+  "landing.onboarding.step3.personRole": "Ваш персональный менеджер по работе с клиентами",
+  "landing.languages.en": "Английский",
+  "landing.languages.et": "Эстонский",
+  "landing.languages.ru": "Русский",
+  "landing.modal.country": "Страна",
+  "landing.modal.searchCountry": "Поиск страны",
+  "landing.modal.language": "Язык",
+  "landing.modal.main": "Главная",
+  "landing.modal.close": "Закрыть",
+  "landing.modal.regionLanguage": "Регион и язык",
+  "landing.modal.confirmChanges": "Подтвердить изменения"
+}

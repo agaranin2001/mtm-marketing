@@ -1,0 +1,377 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap');
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Obviously Narrow';
+  src: url('/fonts/obviously-font/ObviouslyDemo-NarrowBlack.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Humane';
+  src: url('/fonts/Humane-VF.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Integral CF';
+  src: url('/fonts/Integral/Fontspring-DEMO-integralcf-bold.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BRRR Skrrt';
+  src: url('/fonts/BRRR-Skrrt.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Ultra';
+  src: url('/fonts/Gotham Ultra.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.141 0.005 285.823);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.141 0.005 285.823);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.141 0.005 285.823);
+  --primary: oklch(0.21 0.006 285.885);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.967 0.001 286.375);
+  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --accent: oklch(0.967 0.001 286.375);
+  --accent-foreground: oklch(0.21 0.006 285.885);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.92 0.004 286.32);
+  --input: oklch(0.92 0.004 286.32);
+  --ring: oklch(0.705 0.015 286.067);
+  --sidebar: oklch(0.141 0.005 285.823);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.21 0.006 285.885);
+  --sidebar-accent: oklch(0.21 0.006 285.885);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+}
+
+.dark {
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.21 0.006 285.885);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.21 0.006 285.885);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.21 0.006 285.885);
+  --secondary: oklch(0.274 0.006 286.033);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --accent: oklch(0.274 0.006 286.033);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.552 0.016 285.938);
+  --sidebar: oklch(0.141 0.005 285.823);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.21 0.006 285.885);
+  --sidebar-accent: oklch(0.21 0.006 285.885);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+}
+
+/* MTM brand design tokens — use these instead of raw hex values */
+:root {
+  --page-px: 75px;
+  --mtm-primary: #FF5A36;
+  --mtm-primary-hover: #EF4520;
+  --mtm-primary-disabled: #F6B8AA;
+  --mtm-blue: #2F9BFF;
+  --mtm-blue-hover: #2088EC;
+  --mtm-text-dark: #070233;
+  --mtm-text-body: #071A34;
+  --mtm-text-muted: rgba(7, 2, 51, 0.6);
+  --mtm-text-faint: rgba(7, 2, 51, 0.5);
+  --mtm-border: #E4E9F1;
+  --mtm-border-field: rgba(7, 2, 51, 0.2);
+  --mtm-bg-page: #F8FAFD;
+  --mtm-success: #2F9A48;
+  --mtm-success-border: #4CAF50;
+  --mtm-danger: #FF1700;
+}
+
+@theme inline {
+  --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  /* MTM brand tokens exposed as Tailwind utilities */
+  --color-brand-primary: var(--mtm-primary);
+  --color-brand-primary-hover: var(--mtm-primary-hover);
+  --color-brand-blue: var(--mtm-blue);
+  --color-brand-blue-hover: var(--mtm-blue-hover);
+  --color-brand-text-dark: var(--mtm-text-dark);
+  --color-brand-text-body: var(--mtm-text-body);
+  --color-brand-border: var(--mtm-border);
+  --color-brand-border-field: var(--mtm-border-field);
+  --color-brand-bg-page: var(--mtm-bg-page);
+  --color-brand-success: var(--mtm-success);
+  --color-brand-success-border: var(--mtm-success-border);
+  --color-brand-danger: var(--mtm-danger);
+  /* Brand radius — the single source of truth for all container corners */
+  --radius-brand: 4px;
+  /* Flatten all standard Tailwind/shadcn radius tokens to the brand value */
+  --radius-sm: 4px;
+  --radius-md: 4px;
+  --radius-lg: 4px;
+  --radius-xl: 4px;
+  --radius-2xl: 4px;
+  --radius-3xl: 4px;
+  /* Zero out every Tailwind shadow token so shadow-* utilities produce no shadow */
+  --shadow-sm: 0 0 #0000;
+  --shadow-md: 0 0 #0000;
+  --shadow-lg: 0 0 #0000;
+  --shadow-xl: 0 0 #0000;
+  --shadow-2xl: 0 0 #0000;
+  --shadow: 0 0 #0000;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+}
+
+* {
+  border-color: var(--border);
+  outline-color: var(--ring);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  /* Mobile: headings are 4px smaller than desktop */
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 24px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+    h4 {
+      font-size: 14px;
+    }
+    h5 {
+      font-size: 12px;
+    }
+  }
+}
+
+/* ── Custom scrollbar ────────────────────────────────────────────────────────
+   Track: 12px wide, rgba(7,2,51,0.12) background.
+   Thumb: visually 4px — achieved via 4px transparent border + background-clip.
+   Firefox: scrollbar-width thin (~8px) with matching colors. */
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(7, 2, 51, 0.12);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(7, 2, 51, 0.25);
+  border: 4px solid transparent;
+  background-clip: padding-box;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(7, 2, 51, 0.4);
+  background-clip: padding-box;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(7, 2, 51, 0.25) rgba(7, 2, 51, 0.12);
+}
+
+/* ── Full-bleed escape hatch — for pages that manage their own edge-to-edge layout (chat, settings) */
+.full-bleed {
+  margin-left: calc(-1 * var(--page-px));
+  margin-right: calc(-1 * var(--page-px));
+  width: calc(100% + 2 * var(--page-px));
+}
+@media (max-width: 767px) {
+  .full-bleed {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    width: calc(100% + 2rem);
+  }
+}
+
+/* ── Desktop-only full-bleed — for session tracking page (no mobile px-4 in main) */
+@media (min-width: 768px) {
+  .md-full-bleed {
+    margin-left: calc(-1 * var(--page-px));
+    margin-right: calc(-1 * var(--page-px));
+    width: calc(100% + 2 * var(--page-px));
+  }
+}
+
+/* ── Mobile-only full-bleed — edge-to-edge under the mobile px-4 gutter */
+@media (max-width: 767px) {
+  .mobile-full-bleed {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    width: calc(100% + 2rem);
+  }
+}
+
+/* Recharts attribute-selector overrides — moved here from chart.tsx to avoid
+   PostCSS choking on Tailwind's backslash-escaped single quotes in generated CSS */
+.recharts-chart-root .recharts-cartesian-grid line[stroke="#ccc"],
+.recharts-chart-root .recharts-cartesian-grid line[stroke='#ccc'] {
+  stroke: color-mix(in srgb, var(--border) 50%, transparent);
+}
+.recharts-chart-root .recharts-polar-grid [stroke="#ccc"],
+.recharts-chart-root .recharts-polar-grid [stroke='#ccc'] {
+  stroke: var(--border);
+}
+.recharts-chart-root .recharts-reference-line [stroke="#ccc"],
+.recharts-chart-root .recharts-reference-line [stroke='#ccc'] {
+  stroke: var(--border);
+}
+.recharts-chart-root .recharts-dot[stroke="#fff"],
+.recharts-chart-root .recharts-dot[stroke='#fff'] {
+  stroke: transparent;
+}
+.recharts-chart-root .recharts-sector[stroke="#fff"],
+.recharts-chart-root .recharts-sector[stroke='#fff'] {
+  stroke: transparent;
+}
+
+/* Landing page marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+/* Animated login gradient (Monetiseur AuthLayout) */
+@keyframes auth-gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-auth-gradient {
+  background-image: linear-gradient(135deg, #070233, #170486, #3d0a5c, #170486, #070233);
+  background-size: 300% 300%;
+  animation: auth-gradient-shift 14s ease infinite;
+}

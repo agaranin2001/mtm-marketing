@@ -1,0 +1,22 @@
+{
+  "name": "knowledge-hub",
+  "version": "1.0.0",
+  "description": "Monetiseur Talent Management — Knowledge Hub (VitePress docs)",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "tailwindcss": "^4.3.2",
+    "vitepress": "^1.6.4"
+  },
+  "dependencies": {
+    "lucide-vue-next": "^1.0.0"
+  }
+}

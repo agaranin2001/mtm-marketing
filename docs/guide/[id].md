@@ -1,0 +1,3 @@
+---
+khLayout: guide
+---

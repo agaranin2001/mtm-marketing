@@ -1,0 +1,19 @@
+{
+  "landing.cta.login": "Logi sisse",
+  "landing.cta.bookDemo": "Broneeri demo",
+  "landing.footer.copyright": "© {{year}} Monetiseur",
+  "landing.footer.privacy": "Privaatsuspoliitika",
+  "landing.footer.terms": "Kasutustingimused",
+  "landing.footer.contact": "Kontakt",
+  "landing.onboarding.step3.personRole": "Teie isiklik kliendihaldur",
+  "landing.languages.en": "Inglise",
+  "landing.languages.et": "Eesti",
+  "landing.languages.ru": "Vene",
+  "landing.modal.country": "Riik",
+  "landing.modal.searchCountry": "Otsi riiki",
+  "landing.modal.language": "Keel",
+  "landing.modal.main": "Peamine",
+  "landing.modal.close": "Sulge",
+  "landing.modal.regionLanguage": "Piirkond ja keel",
+  "landing.modal.confirmChanges": "Kinnita muudatused"
+}
