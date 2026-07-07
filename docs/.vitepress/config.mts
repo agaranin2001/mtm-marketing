@@ -11,6 +11,15 @@ export default defineConfig({
   // server serves the site and the docs from one folder.
   base: '/docs/',
   outDir: '../dist/docs',
+  head: [
+    ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-8GL8GJMVK8' }],
+    ['script', {}, [
+      'window.dataLayer = window.dataLayer || [];',
+      'function gtag(){dataLayer.push(arguments);}',
+      'gtag(\'js\', new Date());',
+      'gtag(\'config\', \'G-8GL8GJMVK8\');',
+    ].join('\n')],
+  ],
   // The custom theme (.vitepress/theme) owns all chrome; no default nav/sidebar.
   vite: {
     plugins: [tailwindcss()],
