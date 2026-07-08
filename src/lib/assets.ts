@@ -11,6 +11,18 @@ export const IMAGES = {
     faviconSvg: '/images/brand/favicon.svg',
   },
   olympicRings: '/images/olympic-rings.webp',
+  howItWorks: {
+    step1: '/images/howitoworks1.avif',
+    step2: '/images/howitoworks2.png',
+    step3: '/images/howitoworks3.avif',
+    step4: '/images/howitoworks4.png',
+  },
+  stackCards: {
+    card1: '/images/section31.png',
+    card2: '/images/section32.png',
+    card3: '/images/section33.png',
+    card4: '/images/section34.png',
+  },
   landing: {
     hero: '/images/landing/hero.webp',
     heroEok: '/images/landing/hero-eok.webp',
