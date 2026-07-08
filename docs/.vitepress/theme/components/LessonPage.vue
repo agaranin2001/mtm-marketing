@@ -74,16 +74,32 @@ const nextHref = computed(() =>
         </nav>
       </aside>
 
-      <!-- Video panel -->
-      <main class="relative order-1 aspect-video shrink-0 bg-black md:order-2 md:aspect-auto md:flex-1">
-        <iframe
-          :key="lesson.id"
-          class="absolute inset-0 h-full w-full"
-          :src="embedUrl"
-          :title="lesson.title"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        />
+      <!-- Video + written guide panel -->
+      <main class="order-1 flex flex-col bg-white md:order-2 md:flex-1 md:overflow-y-auto">
+        <div class="relative aspect-video w-full shrink-0 bg-black">
+          <iframe
+            :key="lesson.id"
+            class="absolute inset-0 h-full w-full"
+            :src="embedUrl"
+            :title="lesson.title"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+        </div>
+
+        <div v-if="lesson.steps?.length" class="w-full max-w-[720px] px-6 py-8 md:px-10 md:py-10">
+          <h2 class="text-[13px] font-bold uppercase tracking-wide text-[#070233]/40">
+            {{ t('knowledgeHub.lesson.guideTitle', 'Written guide') }}
+          </h2>
+          <ol class="mt-4 flex flex-col gap-4">
+            <li v-for="(step, i) in lesson.steps" :key="i" class="flex gap-3">
+              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#2F9BFF]/10 text-[12px] font-semibold text-[#2F9BFF]">
+                {{ i + 1 }}
+              </span>
+              <span class="text-[15px] leading-relaxed text-[#070233]/80">{{ step }}</span>
+            </li>
+          </ol>
+        </div>
       </main>
     </div>
   </div>
