@@ -32,8 +32,8 @@ export const GUIDES: Record<string, GuideContent> = {
     title: 'Athletes Management',
     description: 'Manage your full athlete roster — view training, events, analytics, recovery and medical records all from one place.',
     image: '/images/knowledgehub/knowledge_hub_athletes.webp',
-    totalLessons: 8,
-    totalDuration: '22 min',
+    totalLessons: 7,
+    totalDuration: '19 min',
     sections: [
       {
         title: 'Introduction',
@@ -47,7 +47,6 @@ export const GUIDES: Record<string, GuideContent> = {
             steps: [
               'Open the Athletes tab from the main navigation to see your full roster.',
               'Each athlete card shows their name, sport, health status badge and a quick workload indicator.',
-              'Use the search bar and filters to narrow the list by sport, level or coach.',
               'Click any athlete card to open their detail page — Training, Events, Analytics, Recovery, Medical and Profile all live under one set of tabs there.',
             ],
           },
@@ -57,18 +56,6 @@ export const GUIDES: Record<string, GuideContent> = {
         title: 'Athletes Overview',
         lessons: [
           {
-            id: 'am-1',
-            title: 'All Athletes',
-            duration: '3:00',
-            type: 'video',
-            steps: [
-              'The All Athletes list is the roster view — sortable by name, sport or workload.',
-              'Use the search box to find an athlete by name, or the filter chips to narrow by sport, level or health status.',
-              'Switch between grid and list layout depending on how many athletes you need to scan at once.',
-              'Click Add Athlete to invite a new athlete directly from this screen.',
-            ],
-          },
-          {
             id: 'am-7',
             title: "Athlete's Profile",
             duration: '2:30',
@@ -76,9 +63,6 @@ export const GUIDES: Record<string, GuideContent> = {
             videoUrl: 'https://youtu.be/6IryqwO2kXo',
             steps: [
               'Open an athlete and select the Profile tab.',
-              'Review and edit personal details — date of birth, sport, weight class, contact info.',
-              'Update the profile photo and any custom fields relevant to your organisation.',
-              'Save changes; they sync immediately across every tab that references this athlete.',
             ],
           },
         ],
@@ -96,7 +80,6 @@ export const GUIDES: Record<string, GuideContent> = {
               'Open an athlete and select the Training tab to see their personal calendar.',
               'Switch between Weekly, Monthly, Macro/Mesocycle and Olympic Cycle views depending on the planning horizon you need.',
               'Click any day to see scheduled sessions, or Add Session to schedule a new one for that athlete.',
-              'Assign a training cycle from here to lock in a longer-term periodisation plan.',
             ],
           },
           {
@@ -138,7 +121,7 @@ export const GUIDES: Record<string, GuideContent> = {
             videoUrl: 'https://youtu.be/rtMqsRFU2to',
             steps: [
               'Open an athlete and select the Recovery tab.',
-              'Review their assigned daily routines and weekly treatments, and mark items as completed.',
+              'Review their assigned daily routines and weekly treatments.',
               'Check recent wellness log entries — sleep, soreness and mood — logged by the athlete.',
               'Adjust or add a routine directly from this tab if their recovery needs change.',
             ],
@@ -153,7 +136,6 @@ export const GUIDES: Record<string, GuideContent> = {
               'Open an athlete and select the Medical tab.',
               'Review current health status, required tests and past test results in one timeline.',
               'Open the Injury History section to see prior injuries and recovery notes.',
-              'Add a new medical record or test result directly from this tab; the athlete\'s health status badge updates automatically.',
             ],
           },
         ],
@@ -180,7 +162,6 @@ export const GUIDES: Record<string, GuideContent> = {
             steps: [
               'Open the Training tab from the main navigation.',
               'From here you can jump into the Exercise Library, Session Templates, or any athlete\'s calendar.',
-              'Use the cycle filter (Weekly, Monthly, Macro/Meso, Olympic Cycle) to switch planning horizons.',
               'Everything you build here — exercises, templates, cycles — becomes reusable across your whole roster.',
             ],
           },
@@ -270,7 +251,7 @@ export const GUIDES: Record<string, GuideContent> = {
             duration: '4:15',
             type: 'video',
             steps: [
-              'From an athlete\'s Training calendar, click Add Session on the day you want to schedule.',
+              'From an athlete\'s Training calendar, click Add Session.',
               'Pick a session type, or start from an existing Session Template to save time.',
               'Set the time, duration and any coaching notes for the athlete.',
               'Save — the session appears immediately on the athlete\'s calendar and in their app.',
@@ -298,8 +279,8 @@ export const GUIDES: Record<string, GuideContent> = {
     title: 'Recovery and Nutrition',
     description: 'Set up daily routines, weekly treatments and nutrition plans to keep athletes recovering and performing at their best.',
     image: '/images/knowledgehub/knowledge_hub_nutrition.webp',
-    totalLessons: 6,
-    totalDuration: '19 min',
+    totalLessons: 5,
+    totalDuration: '16 min',
     sections: [
       {
         title: 'Introduction',
@@ -331,8 +312,7 @@ export const GUIDES: Record<string, GuideContent> = {
             steps: [
               'Open Recovery → Manage Recovery and select an athlete.',
               'Under Daily Recovery Routines, click Add to create a new routine — stretching, mobility work, breathing exercises and so on.',
-              'Set how often it repeats (daily or specific days) and an estimated duration.',
-              'The athlete sees this routine on their own recovery checklist every day it\'s scheduled.',
+              'The athlete sees this routine on their own recovery checklist automatically every day.',
             ],
           },
           {
@@ -355,7 +335,7 @@ export const GUIDES: Record<string, GuideContent> = {
         lessons: [
           {
             id: 'rm-3',
-            title: 'Daily Nutrition',
+            title: 'Daily Nutrition & Supplementation',
             duration: '3:00',
             type: 'video',
             videoUrl: 'https://youtu.be/me8DXXcio4A',
@@ -363,19 +343,6 @@ export const GUIDES: Record<string, GuideContent> = {
               'Open Recovery → Manage Nutrition and select an athlete.',
               'Set their daily nutrition targets — calories, protein, carbs and fat.',
               'Athletes log their meals against these targets from their own dashboard.',
-              'Track daily adherence directly from this tab.',
-            ],
-          },
-          {
-            id: 'rm-4',
-            title: 'Supplementation',
-            duration: '3:00',
-            type: 'video',
-            steps: [
-              'From Manage Nutrition, open the Supplements section for an athlete.',
-              'Add a supplement with dosage, timing and the reason it\'s recommended.',
-              'The athlete sees it as part of their daily nutrition checklist.',
-              'Remove or adjust a supplement here at any time as their plan evolves.',
             ],
           },
           {
@@ -388,7 +355,6 @@ export const GUIDES: Record<string, GuideContent> = {
               'Open Recovery → Nutrition Report and select an athlete and date range.',
               'Review daily target adherence, macro breakdown and logged meals over the period.',
               'Use the report to spot consistent gaps — e.g. under-eating protein — and adjust targets accordingly.',
-              'Export or share the report with the athlete or your nutrition staff.',
             ],
           },
         ],
@@ -434,7 +400,7 @@ export const GUIDES: Record<string, GuideContent> = {
               'From the Events tab, click Create Event.',
               'Enter the event name, type (competition or training camp), start and end dates, and location.',
               'Attach any relevant documents, such as schedules or entry forms.',
-              'Save — the event now appears in the events list, ready for you to assign athletes.',
+              'Assign athletes to the event, then save.',
             ],
           },
           {
@@ -459,8 +425,8 @@ export const GUIDES: Record<string, GuideContent> = {
     title: 'Manage Your Team',
     description: 'Invite athletes and staff, assign roles and keep your club or organisation running smoothly on Monetiseur.',
     image: '/images/knowledgehub/team_management.webp',
-    totalLessons: 4,
-    totalDuration: '12 min',
+    totalLessons: 1,
+    totalDuration: '2 min',
     sections: [
       {
         title: 'Getting Started',
@@ -476,52 +442,6 @@ export const GUIDES: Record<string, GuideContent> = {
               'See every athlete, coach and staff member in your organisation in one place.',
               'From here you can invite new members, assign roles and manage permissions.',
               'Changes made here take effect immediately across the whole platform.',
-            ],
-          },
-        ],
-      },
-      {
-        title: 'Inviting Members',
-        lessons: [
-          {
-            id: 'myt-1',
-            title: 'Inviting Athletes via Email or Group Code',
-            duration: '3:30',
-            type: 'video',
-            steps: [
-              'From the Team tab, click Invite Athlete.',
-              'Send a direct email invitation, or generate a shareable group code athletes can enter when they sign up.',
-              'A group code is useful for onboarding a whole squad at once without sending individual invites.',
-              'Track pending invitations and resend them from the same screen if needed.',
-            ],
-          },
-          {
-            id: 'myt-2',
-            title: 'Inviting Coaches and Staff',
-            duration: '3:00',
-            type: 'video',
-            steps: [
-              'From the Team tab, click Invite Staff.',
-              'Enter the person\'s email and assign their role — coach, medical staff or admin.',
-              'They receive an email invitation to set up their account.',
-              'Once accepted, they appear in your Team list with the permissions matching their role.',
-            ],
-          },
-        ],
-      },
-      {
-        title: 'Roles & Permissions',
-        lessons: [
-          {
-            id: 'myt-3',
-            title: 'Understanding Roles and Permissions',
-            duration: '3:30',
-            type: 'video',
-            steps: [
-              'Open the Team tab and select a member to view or change their role.',
-              'Coaches can manage training, events and analytics for their assigned athletes.',
-              'Medical staff see and edit medical records but not training or finance data.',
-              'Admins have full access, including inviting and removing other team members.',
             ],
           },
         ],
@@ -547,7 +467,7 @@ export const GUIDES: Record<string, GuideContent> = {
             videoUrl: 'https://youtu.be/_SRgbwVvusw',
             steps: [
               'Open the Analytics tab from the main navigation.',
-              'The Summary view shows training load, athlete engagement and recovery balance across your whole roster.',
+              'The Summary view shows training load, athlete engagement and recovery balance for the selected athlete.',
               'Filter by athlete, team or date range to focus on a specific period.',
               'Use these dashboards to catch overtraining or under-recovery trends before they become injuries.',
             ],
@@ -565,9 +485,8 @@ export const GUIDES: Record<string, GuideContent> = {
             videoUrl: 'https://youtu.be/uBk2gLGju7U',
             steps: [
               'Open Analytics → Session Reports.',
-              'Filter by athlete, coach role or date range to find the sessions you need.',
-              'Each report shows completion rate, duration and any coaching notes logged for the session.',
-              'Export a report to share with an athlete, medical staff or another coach.',
+              'Filter by athlete or date range to find the sessions you need.',
+              'Each report shows completion rate, duration and athlete\'s notes logged for the session.',
             ],
           },
         ],
